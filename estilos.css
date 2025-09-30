@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colorgris: #eceeed;
+  --colorgrisfuerte: #303030;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  background: #fff;
+}
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+}
+.margen {
+  padding: 15px;
+}
+.margen_iconos {
+  margin-left: 10px;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  height: 36px;
+  display: block;
+}
+.btn_login {
+  padding: 10px 26px;
+  background: var(--colorgrisfuerte);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.navegacion {
+  background: var(--colorgris);
+}
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+.menu a {
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  padding: 10px 24px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-bottom: 6px #ddd solid;
+  border-radius: 2px;
+  font-weight: 600;
+}
+.menu a:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-bottom: 6px #000 solid;
+}
+
+.portada {
+  position: relative;
+}
+.portada img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+.capa_texto {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  text-align: center;
+}
+.titular_portada {
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  color: #000;
+  background: rgba(255, 255, 255, .85);
+  display: inline-block;
+  padding: 18px 26px;
+}
+
+.franja_titulo {
+  background: #000;
+}
+.titulo_franja {
+  color: #fff;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 14px 0;
+  text-transform: capitalize;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 26px;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 40px 15px;
+}
+.tarjeta {
+  flex: 1 1 260px;
+  max-width: calc(25% - 20px);
+  background: #eee2;
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.circulo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.circulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.texto_tarjeta {
+  color: #555;
+  margin: 8px 0 16px;
+}
+.btn_gris {
+  background: #cfcfcf;
+  color: #222;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.btn_gris:hover {
+  background: #000;
+  color: #fff;
+}
+
+.pie {
+  background: #f0f0f0;
+  border-top: 8px solid #d5d5d5;
+}
+.pie_contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 15px;
+}
+.pie_logo img {
+  height: 36px;
+}
+.redes {
+  display: flex;
+  gap: 18px;
+}
+.redes a {
+  color: #2b2b2b;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+@media (max-width:992px) {
+  .portada img {
+    height: 440px;
+  }
+  .titular_portada {
+    font-size: 44px;
+  }
+  .tarjeta {
+    max-width: calc(50% - 20px);
+  }
+}
+@media (max-width:768px) {
+  .cabecera {
+    padding: 10px 15px;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu a {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 6px #ddd solid;
+  }
+  .portada img {
+    height: 360px;
+  }
+  .capa_texto {
+    bottom: 30px;
+  }
+  .titular_portada {
+    font-size: 36px;
+  }
+  .tarjetas {
+    flex-direction: column;
+    gap: 34px;
+  }
+  .tarjeta {
+    max-width: 100%;
+  }
+  .pie_contenido {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
